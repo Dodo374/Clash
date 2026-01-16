@@ -762,25 +762,21 @@ function main(config) {
       (n) => n !== '其他节点' || otherProxies.length > 0
     ),
     icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png',
-  })
 
-  functionalGroups.push({
-  ...groupBaseOption,
-  name: '自动优选',
-  type: 'url-test',
-  proxies: allProxies,
-  url: 'http://www.gstatic.com/generate_204',
-  interval: 300,
-  tolerance: 50,
-  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speed.png',
-  })
+    ...groupBaseOption,
+    name: '自动优选',
+    type: 'url-test',
+    proxies: allProxies,
+    url: 'http://www.gstatic.com/generate_204',
+    interval: 300,
+    tolerance: 50,
+    icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speed.png',
 
-  functionalGroups.push({
-  ...groupBaseOption,
-  name: '默认代理',
-  type: 'select',
-  proxies: ['自动优选', '手动选择'],
-  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png',
+    ...groupBaseOption,
+    name: '默认代理',
+    type: 'select',
+    proxies: ['自动优选', '手动选择'],
+    icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png',
   })
 
   serviceConfigs.forEach((svc) => {
